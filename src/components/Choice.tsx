@@ -2,7 +2,7 @@ import { Answer } from "../types/Answer";
 
 interface ChoiceProps {
     choice: Answer | null;
-    onClick?: (awnser: Answer) => void;
+    onClick?: (awnser: Answer) => void
 }
 
 export const Choice = ({ choice, onClick }: ChoiceProps) => {
