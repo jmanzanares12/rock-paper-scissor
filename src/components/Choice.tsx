@@ -1,7 +1,8 @@
+import { Answer } from "../types/Answer";
 
 interface ChoiceProps {
-    choice: string | null;
-    onClick?: (awnser: string) => void
+    choice: Answer | null;
+    onClick?: (awnser: Answer) => void;
 }
 
 export const Choice = ({ choice, onClick }: ChoiceProps) => {

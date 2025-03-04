@@ -1,3 +1,4 @@
+import SelectionModule from "./modules/SelectionModule"
 
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
 
   return (
     <>
-      
+      <SelectionModule />
     </>
   )
 }
