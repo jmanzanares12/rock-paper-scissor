@@ -3,16 +3,24 @@ import { Answer } from "../types/answer";
 
 type GameState = {
     step: number;
-    choise: Answer | null;
+    choice: Answer | null;
     setStep: (step: number) => void;
-    setChoise: (choise: Answer) => void;
+    setChoise: (choice: Answer) => void;
 }
 
-const useGameStore = create<GameState>((set) => ({
+const useGameStore = create<GameState>((set, get) => ({
     step: 0,
-    choise: null,
-    setStep: (step: number) => set({ step }),
-    setChoise: (choise: Answer) => set({ choise }),
+    choice: null,
+    setStep: (step: number) => {
+        if (get().step !== step) {
+            set({ step });
+        }
+    }, 
+    setChoise: (choice: Answer) => {
+        if (get().choice !== choice) {
+            set({ choice });
+        }
+    }
 }));
 
 export default useGameStore;

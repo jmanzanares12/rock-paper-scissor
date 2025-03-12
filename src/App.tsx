@@ -10,6 +10,8 @@ const renderModule = (step: STEPS) => {
       return <SelectionModule />
     case STEPS.Play:
       return <PlayModule />
+    case STEPS.Result:
+      return <div>Result</div>
     default:
       return null;
   }

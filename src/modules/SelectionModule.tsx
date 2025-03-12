@@ -6,8 +6,10 @@ import { Answer } from "../types/answer";
 
 const SelectionModule = () => {
 
-    const [setChoise, setSep] = useGameStore((state) => [state.setChoise, state.setStep]);
-    
+    const setChoise = useGameStore((state) => state.setChoise);
+    const setSep = useGameStore((state) => state.setStep);
+
+
     const handleClick = (choice: Answer) => {
         setChoise(choice);
         setSep(STEPS.Play);
@@ -15,7 +17,7 @@ const SelectionModule = () => {
 
     return (
         <div className="flex row justify-around">
-            {ANSWERS.map((answer) => <Choice choice={answer} onClick={handleClick}/>)}
+            {ANSWERS.map((answer) => <Choice choice={answer} onClick={handleClick} />)}
         </div>
     )
 }

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 const PlayModule = () => {
 
-    const choice = useGameStore((state) => state.choise);
+    const choice = useGameStore((state) => state.choice);
     const { status, cpuAnwser, generateCpuAnswer } = usePlayGame();
 
     useEffect(() => {
@@ -15,21 +15,16 @@ const PlayModule = () => {
     }, [choice, generateCpuAnswer]);
 
     return (
-        <>
-            <div className="flex row justify-around">
-                <div className="flex col align-center">
-                    <span className="text3x1 text-center pb-5">Player</span>
-                    <Choice choice={choice} />
-                </div>
+        <div className="flex row justify-around">
+            <div className="flex col align-center">
+                <span className="text3x1 text-center pb-5">Player</span>
+                <Choice choice={choice} />
             </div>
-
-            <div className="flex row justify-around">
-                <div className="flex col align-center">
-                    <span className="text3x1 text-center pb-5">CPU</span>
-                    <Choice choice={cpuAnwser} />
-                </div>
+            <div className="flex col align-center">
+                <span className="text3x1 text-center pb-5">CPU</span>
+                <Choice choice={cpuAnwser} />
             </div>
-        </>
+        </div>
     )
 }
 
