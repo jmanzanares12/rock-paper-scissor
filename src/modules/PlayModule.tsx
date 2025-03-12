@@ -16,12 +16,12 @@ const PlayModule = () => {
 
     return (
         <div className="flex row justify-around">
-            <div className="flex col align-center">
-                <span className="text3x1 text-center pb-5">Player</span>
+            <div className="flex flex-col align-center">
+                <span className="text-3xl text-center pb-5">Player</span>
                 <Choice choice={choice} />
             </div>
-            <div className="flex col align-center">
-                <span className="text3x1 text-center pb-5">CPU</span>
+            <div className="flex flex-col align-center">
+                <span className="text-3xl text-center pb-5">CPU</span>
                 <Choice choice={cpuAnwser} />
             </div>
         </div>
