@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { Answer } from "../types/Answer";
+import { Answer } from "../types/answer";
 
 type GameState = {
     step: number;

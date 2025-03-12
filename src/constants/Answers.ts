@@ -1,3 +1,3 @@
-import { Answer } from "../types/Answer";
+import { Answer } from "../types/answer";
 
 export const ANSWERS: Answer[] = ['✊', '✌️', '✋'];

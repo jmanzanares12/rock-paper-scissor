@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { Answer } from "../types/Answer";
+import { Answer } from "../types/answer";
 import { Status } from "../types/status";
 import { STATUS } from "../constants/Status";
 import { ANSWERS } from "../constants/Answers";
@@ -9,30 +9,29 @@ const usePlayGame = () => {
     const [cpuAnwser, setCpuAnwser] = useState<Answer | null>(null);
 
     const generateCpuAnswer = useCallback((choice: Answer) => {
-        const randomIdex = Math.floor(Math.random() * ANSWERS.length);
-        const cpuAnswer = ANSWERS[randomIdex];
+        const randomIndex = Math.floor(Math.random() * ANSWERS.length);
+        const cpuAnswer = ANSWERS[randomIndex];
 
         setCpuAnwser(cpuAnswer);
 
-        if (cpuAnswer === choice) {
-
+        if (choice === cpuAnswer) {
             setStatus(STATUS.Draw);
-            return
+            return;
         }
 
         if (choice === ANSWERS[2] && cpuAnswer === ANSWERS[0]) {
             setStatus(STATUS.Win);
-            return
+            return;
         }
 
         if (choice === ANSWERS[0] && cpuAnswer === ANSWERS[1]) {
             setStatus(STATUS.Win);
-            return
+            return;
         }
 
         if (choice === ANSWERS[1] && cpuAnswer === ANSWERS[2]) {
             setStatus(STATUS.Win);
-            return
+            return;
         }
 
         setStatus(STATUS.Lose);

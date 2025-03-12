@@ -1,4 +1,4 @@
-import { Answer } from "../types/Answer";
+import { Answer } from "../types/answer";
 
 interface ChoiceProps {
     choice: Answer | null;
