@@ -10,7 +10,7 @@
 
 ## 📥 Instalación 
 1. Usa el siguiente comando para clonar el repositorio:\
-   `git clone https://github.com/jmanzanares12/rock-paper-scissor.git`
+   `git clone git@github.com:jmanzanares12/rock-paper-scissor.git`
 2. Accede al directorio del repositorio:\
    `cd rock-paper-scissor`
 3. Instala las dependencias:\
