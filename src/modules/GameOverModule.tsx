@@ -12,11 +12,11 @@ const GameOverModule = () => {
     }
 
     return (
-        <div className="flex flex-col items-center justify-center mt-10 space-y-4">
-            <h2 className="text-3xl font-bold">Game Over</h2>
-            <button className="px-6 py-3 w-48 rounded-lg bg-red-600 hover:bg-red-700 active:bg-red-800 
-                text-white font-semibold text-lg transition-all duration-300 shadow-lg 
-                hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-red-300"
+        <div className="flex flex-col items-center gap-4 text-center mt-10">
+            <h2 className="text-3xl sm:text-3xl md:text-4xl font-bold">Game Over</h2>
+            <button className="px-6 py-3 w-full sm:w-auto rounded-lg bg-red-600 hover:bg-red-700 active:bg-red-800 
+                text-white font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none 
+                focus:ring-4 focus:ring-red-300 focus:ring-opacity-50"
                 onClick={handleClick}>
                 Play again
             </button>

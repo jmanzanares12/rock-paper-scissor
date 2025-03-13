@@ -23,8 +23,8 @@ function App() {
   const step = useGameStore((state) => state.step);
   const module = useMemo(() => renderModule(step), [step]);
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex-col items-center justify-center space-y-8">
-      <h1 className="text-center text-5xl font-extrabold tracking-wider pt-12 pb-12">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center px-4">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold pt-12 pb-6 text-center">
         Rock, Paper or Scissor
       </h1>
       <Score />
