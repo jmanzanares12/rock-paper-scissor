@@ -1,54 +1,24 @@
-# React + TypeScript + Vite
+# Rock, Paper or Scissor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Este es un juego clásico de "Piedra, Papel o Tijeras" desarrollado con React, Vite, TypeScript y Tailwind CSS.**
 
-Currently, two official plugins are available:
+## 🚀 Tecnologias
+* [React](https://es.react.dev/) - Biblioteca para constuir interfaces de usuario
+* [Vite](https://vite.dev/) - Entorno de desarrollo rapido y eficiente.
+* [TypeScript](https://www.typescriptlang.org/) - Superconjunto de JavaScript
+* [Tailwind](https://tailwindcss.com/) - Framework de estilos para un diseño moderno y ágil.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📥 Instalación 
+1. Usa el siguiente comando para clonar el repositorio:\
+   `git clone git@github.com:jmanzanares12/rock-paper-scissor.git`
+2. Accede al directorio del repositorio:\
+   `cd rock-paper-scissor`
+3. Instala las dependencias:\
+   `npm install`
+4. Ejecuta en el servidor de desarrollo:\
+   `npm run dev`
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🎮 Cómo jugar
+1. Elije entre "Piedra", "Papel" o "Tijeras".
+2. La computadora tomará una elección aleatora.
+3. Se comparan las elecciones y se mostrará el resultado: **Ganaste**, **Perdiste** o **Empate**
