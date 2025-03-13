@@ -7,10 +7,10 @@ interface ChoiceProps {
 
 export const Choice = ({ choice, onClick }: ChoiceProps) => {
     const handleClick = () => (onClick && choice) && onClick(choice);
-    
+
     return (
-        <div className="rounded-full text-9xl">
-            <button className="bg-gray-400 hover:bg-gray-600 rounded-full shadow-lg h-48 w-48" onClick={handleClick}>
+        <div className="flex items-center justify-center">
+            <button className="px-6 py-4 bg-gray-800 text-white text-xl font-semibold rounded-lg shadow-md hover:bg-gray-700 transition" onClick={handleClick}>
                 {choice ?? 'Choose'}
             </button>
         </div>

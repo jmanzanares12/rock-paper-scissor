@@ -30,13 +30,15 @@ const Button: React.FC<ButtonProps> = ({ status }) => {
     }
 
     return (
-        <button
-            className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-blue-800
-            text-white font-seibold text-lg trasnsition-all duration-300 shadow-lg
-            hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300 block"
-            onClick={handleClick}>
-            Continue
-        </button>
+        <div className="flex justify-center mt-6">
+            <button
+                className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-blue-800
+                text-white font-semibold text-lg transition-all duration-300 shadow-lg
+                hover:shadow-xl hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                onClick={handleClick}>
+                Continue
+            </button>
+        </div>
     )
 }
 

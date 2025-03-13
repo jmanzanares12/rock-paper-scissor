@@ -1,4 +1,3 @@
-import { Choice } from "../components/Choice";
 import { ANSWERS } from "../constants/Answers";
 import { STEPS } from "../constants/Steps";
 import useGameStore from "../store/GameStore";
@@ -13,11 +12,19 @@ const SelectionModule = () => {
         setChoice(choice);
         setStep(STEPS.Play);
     };
-    
+
 
     return (
-        <div className="flex row justify-around">
-            {ANSWERS.map((answer) => <Choice choice={answer} onClick={handleClick} />)}
+        <div className="flex justify-center items-center gap-6 mt-10">
+            {ANSWERS.map((answer, index) => (
+                <button
+                    key={index}
+                    onClick={() => handleClick(answer)}
+                    className="px-6 py-4 bg-gray-800 text-white text-xl font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
+                >
+                    {answer}
+                </button>
+            ))}
         </div>
     )
 }

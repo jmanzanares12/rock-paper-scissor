@@ -23,12 +23,14 @@ function App() {
   const step = useGameStore((state) => state.step);
   const module = useMemo(() => renderModule(step), [step]);
   return (
-    <div>
-      <h1 className="text-center font-extrabold text-4xl pt-12 pb-12">Rock, Paper or Scissor</h1>
+    <div className="bg-gray-900 text-white min-h-screen flex-col items-center justify-center space-y-8">
+      <h1 className="text-center text-5xl font-extrabold tracking-wider pt-12 pb-12">
+        Rock, Paper or Scissor
+      </h1>
       <Score />
       {module}
     </div>
-  )
+  );
 }
 
 export default App
