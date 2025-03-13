@@ -6,14 +6,14 @@ import { Answer } from "../types/answer";
 
 const SelectionModule = () => {
 
-    const setChoise = useGameStore((state) => state.setChoise);
-    const setSep = useGameStore((state) => state.setStep);
-
+    const setChoice = useGameStore((state) => state.setChoice); 
+    const setStep = useGameStore((state) => state.setStep); 
 
     const handleClick = (choice: Answer) => {
-        setChoise(choice);
-        setSep(STEPS.Play);
-    }
+        setChoice(choice);
+        setStep(STEPS.Play);
+    };
+    
 
     return (
         <div className="flex row justify-around">

@@ -5,7 +5,7 @@ type GameState = {
     step: number;
     choice: Answer | null;
     setStep: (step: number) => void;
-    setChoise: (choice: Answer) => void;
+    setChoice: (choice: Answer) => void;
 }
 
 const useGameStore = create<GameState>((set, get) => ({
@@ -16,7 +16,7 @@ const useGameStore = create<GameState>((set, get) => ({
             set({ step });
         }
     }, 
-    setChoise: (choice: Answer) => {
+    setChoice: (choice: Answer) => {
         if (get().choice !== choice) {
             set({ choice });
         }
