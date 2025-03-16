@@ -24,25 +24,24 @@ const PlayModule = () => {
     }, [countDown]);
 
     if (countDown > 0) {
-        return <span className="h-48 text-6xl font-bold text-center block">{countDown}</span>
+        return <span className="h-48 text-6xl font-bold text-center block py-4">{countDown}</span>
     }
 
     return (
-        <div className="flex flex-col items-center justify-center space-y-8">
+        <div className="flex flex-col justify-center gap-6 mt-6 px-4">
             <Result status={status} />
-            <div className="flex justify-center space-x-16">
+            <div className="flex flex-wrap justify-center gap-10">
                 <div className="flex flex-col items-center">
-                    <span className="text-3xl font-semibold pb-4">Player</span>
+                    <span className="text-2xl sm:text-3xl font-semibold pb-3">Player</span>
                     <Choice choice={choice} />
                 </div>
                 <div className="flex flex-col items-center">
-                    <span className="text-3xl font-semibold pb-4">CPU</span>
+                    <span className="text-2xl sm:text-3xl font-semibold pb-3">CPU</span>
                     <Choice choice={cpuAnwser} />
                 </div>
             </div>
             <Button status={status} />
         </div>
-
     )
 }
 

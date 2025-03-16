@@ -20,7 +20,7 @@ const SelectionModule = () => {
                 <button
                     key={index}
                     onClick={() => handleClick(answer)}
-                    className="px-6 py-4 bg-gray-800 text-white text-xl font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
+                    className="px-6 py-4 bg-gray-700 hover:bg-gray-600 active:bg-gray-500 text-white text-xl font-medium rounded-xl shadow hover:shadow-lg transition-transform duartion-300 tranform hover:scale-105"
                 >
                     {answer}
                 </button>

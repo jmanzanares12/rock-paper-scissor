@@ -10,7 +10,7 @@ export const Choice = ({ choice, onClick }: ChoiceProps) => {
 
     return (
         <div className="flex items-center justify-center">
-            <button className="px-6 py-4 bg-gray-800 text-white text-xl font-semibold rounded-lg shadow-md hover:bg-gray-700 transition" onClick={handleClick}>
+            <button className="px-6 py-4 bg-gray-700 hover:bg-gray-600 active:bg-gray-500 text-white text-xl font-medium rounded-xl shadow hover:shadow-lg transition-transform duration-300 transform hover:scale-105" onClick={handleClick}>
                 {choice ?? 'Choose'}
             </button>
         </div>

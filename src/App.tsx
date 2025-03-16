@@ -23,8 +23,8 @@ function App() {
   const step = useGameStore((state) => state.step);
   const module = useMemo(() => renderModule(step), [step]);
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center px-4">
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold pt-12 pb-6 text-center">
+    <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen flex flex-col items-center px-4 py-12 sm:px-6 lg:px-8">
+      <h1 className="text-4xl md:text-5xl font-bold pt-12 pb-6 text-center tracking-tight">
         Rock, Paper or Scissor
       </h1>
       <Score />

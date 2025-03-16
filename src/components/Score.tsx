@@ -5,9 +5,9 @@ const Score = () => {
     const maxScore = useScoreStore((state) => state.maxScore);
 
     return(
-        <div className="bg-gray-800 w-full mx-w-xs sm:max-w-sm mx-auto text-white text-lg flex justify-between p-6 py-4 items-center rounded-lg md:text-xl">
-            <h2 className="text-3xl font-bold">Score: {score}</h2>
-            <h2 className="text-3xl font-bold">Max Score: {maxScore}</h2>
+        <div className="bg-gray-800 w-full max-w-md text-white text-lg flex justify-between p-4 items-center rounded-xl shadow-md mt-4">
+            <h2 className="text-2xl font-semibold">Score: {score}</h2>
+            <h2 className="text-2xl font-semibold">Max Score: {maxScore}</h2>
         </div>
     )
 }
